@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Lib1Component } from 'lib1';
-import { Lib2Component } from 'lib2';
+import { Lib1Component } from '@nac/lib1';
+import { Lib2Component } from '@nac/lib2';
 
 @Component({
   selector: 'nac-root',

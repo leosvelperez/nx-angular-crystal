@@ -1,0 +1,44 @@
+{
+  "name": "angular-plugin",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "projects/angular-plugin/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/projects/angular-plugin",
+        "main": "projects/angular-plugin/src/index.ts",
+        "tsConfig": "projects/angular-plugin/tsconfig.lib.json",
+        "assets": [
+          "projects/angular-plugin/*.md",
+          {
+            "input": "./projects/angular-plugin/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./projects/angular-plugin/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./projects/angular-plugin",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./projects/angular-plugin",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    }
+  },
+  "tags": []
+}

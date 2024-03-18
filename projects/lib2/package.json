@@ -1,5 +1,5 @@
 {
-  "name": "lib2",
+  "name": "@nac/lib2",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^17.2.0",
