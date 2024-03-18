@@ -36,5 +36,6 @@
       "!{projectRoot}/.eslintrc.json",
       "!{projectRoot}/eslint.config.js"
     ]
-  }
+  },
+  "plugins": ["@nac/angular-plugin"]
 }
