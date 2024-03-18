@@ -10,7 +10,9 @@
     "paths": {
       "@nac/angular-plugin": ["./projects/angular-plugin/src/index.ts"],
       "@nac/lib1": ["./projects/lib1/src/public-api.ts"],
-      "@nac/lib2": ["./projects/lib2/src/public-api.ts"]
+      "@nac/lib2": ["./projects/lib2/src/public-api.ts"],
+      "my-lib1": ["./projects/my-ng-app/projects/my-lib1/src/public-api.ts"],
+      "my-lib2": ["./projects/my-ng-app/projects/my-lib2/src/public-api.ts"]
     },
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
