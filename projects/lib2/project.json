@@ -1,0 +1,32 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "lib2",
+  "projectType": "library",
+  "sourceRoot": "projects/lib2/src",
+  "prefix": "nac",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "project": "projects/lib2/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "projects/lib2/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "projects/lib2/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production",
+      "outputs": ["{workspaceRoot}/dist/lib2"]
+    },
+    "test": {
+      "executor": "@angular-devkit/build-angular:karma",
+      "options": {
+        "tsConfig": "projects/lib2/tsconfig.spec.json",
+        "polyfills": ["zone.js", "zone.js/testing"]
+      }
+    }
+  }
+}
